@@ -16,7 +16,7 @@ class Ship:
         #Load the ship image and get its rect.
         self.image = pygame.image.load('images/spaceship.bmp')
         #Size of the ship.
-        self.image = pygame.transform.scale(self.image, (50, 70))
+        self.image = pygame.transform.scale(self.image, (30, 50))
         self.rect = self.image.get_rect()
 
         #Start each new ship at the bottom center of the screen.
