@@ -1,4 +1,4 @@
-#Main file for Alien Invasion Game.
+# Main file for Alien Invasion Game.
 
 import sys
 import pygame
