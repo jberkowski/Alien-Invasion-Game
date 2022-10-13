@@ -27,6 +27,11 @@ class Settings:
         self.speedup_scale_medium = 1.2
         self.speedup_scale_hard = 1.3
 
+        # How quickly the alien point value increase
+        self.score_scale_easy = 1.5
+        self.score_scale_medium = 2.0
+        self.score_scale_hard = 3.0
+
         self.initialize_dynamic_settings()
 
     def initialize_dynamic_settings(self):

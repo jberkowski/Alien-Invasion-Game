@@ -133,17 +133,24 @@ class AlienInvasion:
                 break
 
     def increase_speed(self):
-        """Increase speed settings according to chosen difficulty."""
+        """Increase speed settings 
+            and alien point values according to chosen difficulty."""
         if self.difficulty == 1:
             self.speedup_scale = self.settings.speedup_scale_easy
+            self.score_scale = self.settings.score_scale_easy
         elif self.difficulty == 2:
             self.speedup_scale = self.settings.speedup_scale_medium
+            self.score_scale = self.settings.score_scale_medium
         elif self.difficulty == 3:
             self.speedup_scale = self.settings.speedup_scale_hard
+            self.score_scale = self.settings.score_scale_hard
 
         self.settings.ship_speed *= self.speedup_scale
         self.settings.bullet_speed *= self.speedup_scale
         self.settings.alien_speed *= self.speedup_scale
+
+        self.settings.alien_points = int(self.settings.alien_points * 
+                                            self.score_scale)
 
     def _ship_hit(self):
         """Respond to the ship being hit by an alien."""
