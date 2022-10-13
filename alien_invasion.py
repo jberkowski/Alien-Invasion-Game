@@ -33,7 +33,7 @@ class AlienInvasion:
 
         self._create_fleet()
 
-        # Make the Play button.
+        # Make the difficulty buttons.
         self.easy_button = Button(self, (0, 255, 0), 1, "Easy")
         self.medium_button = Button(self, (255, 255, 0), 0, "Medium")
         self.hard_button = Button(self, (255, 0, 0), -1, "Hard")
@@ -110,7 +110,7 @@ class AlienInvasion:
             self.bullets, self.aliens, True, True)
 
         if not self.aliens:
-            # Destroy existing bullets and create new fleet.
+            # Destroy existing bullets, create new fleet, increase difficulty.
             self.bullets.empty()
             self._create_fleet()
             self.increase_speed()
@@ -125,7 +125,7 @@ class AlienInvasion:
                 break
 
     def increase_speed(self):
-        """Increase speed settings."""
+        """Increase speed settings according to chosen difficulty."""
         if self.difficulty == 1:
             self.speedup_scale = self.settings.speedup_scale_easy
         elif self.difficulty == 2:
@@ -209,7 +209,7 @@ class AlienInvasion:
             # Hide the mouse cursor.
             pygame.mouse.set_visible(False)
 
-            # Set up difficulty
+            # Set up difficulty.
             if self.easy_button.rect.collidepoint(mouse_pos):
                 self.difficulty = 1
             elif self.medium_button.rect.collidepoint(mouse_pos):
@@ -249,7 +249,7 @@ class AlienInvasion:
             bullet.draw_bullet()
         self.aliens.draw(self.screen)
 
-        # Draw the play button if the game is inactive.
+        # Draw the difficulty buttons if the game is inactive.
         if not self.stats.game_active:
             self.easy_button.draw_button()
             self.medium_button.draw_button()
