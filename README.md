@@ -33,9 +33,9 @@ What can you see in the game window:
 
 On the bottom of the screen is you ship. It can move to the left and right and shoot bullets. One bullet kills one Alien, if hits.
 
-The green guys are the Aliens. If you kill the entire wave - next wave will appear and the game will speed up. If even one Alien reaches the bottom of\ the screen or your ship - you will lose one life. If you loose all your lives the game is over.
+The green guys are the Aliens. If you kill the entire wave - next wave will appear and the game will speed up. If even one Alien reaches the bottom of the screen or your ship - you will lose one life. If you loose all your lives the game is over.
 
-You can choose between three difficulty levels. The difficult levels defines how quickly the Aliens speed will increase with each wave, and how many points you will get for shooting them.
+You can choose between three difficulty levels. The difficulty level defines how quickly the Aliens speed will increase with each wave, and how many points you will get for shooting them.
 
 ## Contributing:
 
